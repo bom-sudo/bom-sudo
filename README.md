@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Natiphong Ju</h1>
+<h1 align="center">Hi 👋, I'm Natiphong.Ju</h1>
 <h3 align="center">Infrastructure Engineer | Software Tester | Computer Science Enthusiast</h3>
 
 <p align="center">
