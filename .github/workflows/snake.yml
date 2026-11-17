@@ -1,0 +1,88 @@
+# 🎮 Profile animations: 🐍 Snake (neon) + 🟡 Pac-Man + 🧱 Breakout + 🏙️ 3D Contrib → push ไป branch `output`
+name: "🎮 Profile Animations"
+
+on:
+  schedule:
+    - cron: "17 */12 * * *" # ทุก 12 ชม. (07:17 / 19:17 ICT) — นาทีคี่ๆ เลี่ยงคิวช่วงต้นชั่วโมง
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/snake.yml"]
+
+# least privilege: ต้องการแค่ push ไป branch `output`
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-animations
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    name: "🎨 Generate animations"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # 🐍 งูธีมนีออน: ตัวงูสีม่วง (โทนเดียวกับ Platform Engineer ใน mermaid) กินจุดสีฟ้า #00D9FF (สีเดียวกับ typing header)
+      - name: "🐍 Generate snake (SVG + GIF, light/dark/neon)"
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg?color_snake=#9b5de5&color_dots=#ebedf0,#c7f4ff,#7fe6ff,#33d6ff,#00a8cc
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#c77dff&color_dots=#161b22,#003d4d,#00708a,#00a8cc,#00d9ff
+            dist/github-snake-neon.svg?color_background=#0d1117&color_snake=#ff006e&color_dots=#161b22,#3a0ca3,#7209b7,#f72585,#ff9e00
+            dist/github-snake.gif?palette=github-dark&color_snake=#c77dff&color_dots=#161b22,#003d4d,#00708a,#00a8cc,#00d9ff
+
+      # 🟡 Pac-Man + 🧱 Breakout เล่นบน contribution graph (light + dark → dist/)
+      # repo นี้ไม่มี release tag เลยต้องใช้ @main
+      - name: "🟡 Generate Pac-Man & 🧱 Breakout"
+        uses: abozanona/pacman-contribution-graph@main
+        continue-on-error: true # ถ้าเกมพัง งูยังต้อง deploy ได้
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          games: "pacman,breakout"
+
+      # 🏙️ กราฟคอนทริบิวต์ 3D (ตึกสูงตามจำนวน commit) → ออกมาที่ profile-3d-contrib/
+      - name: "🏙️ Generate 3D contribution graph"
+        uses: yoshi389111/github-profile-3d-contrib@latest
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: "📦 Collect 3D outputs into dist/3d"
+        run: |
+          if [ -d profile-3d-contrib ]; then
+            mkdir -p dist/3d
+            cp profile-3d-contrib/*.svg dist/3d/
+          else
+            echo "::warning::3D contrib was not generated — skipping"
+          fi
+          ls -lhR dist/
+
+      # force-push ไป branch `output` (แยกจาก main ไม่ให้ history รก)
+      - name: "🚀 Push to output branch"
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "chore: update profile animations [skip ci]"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 🖼️ โชว์ preview ในหน้า Actions run summary — ไม่ต้องเปิด branch ไปดูเอง
+      - name: "🖼️ Job summary preview"
+        env:
+          BASE: https://raw.githubusercontent.com/${{ github.repository }}/output
+        run: |
+          {
+            echo "## 🎮 Profile animations updated!"
+            echo "_$(TZ=Asia/Bangkok date '+%Y-%m-%d %H:%M') ICT_ (raw cache อาจดีเลย์ ~5 นาที)"
+            echo ""
+            for f in github-snake-dark.svg github-snake-neon.svg pacman-contribution-graph-dark.svg breakout-contribution-graph-dark.svg 3d/profile-night-rainbow.svg; do
+              echo "### \`$f\`"
+              echo "<img src=\"$BASE/$f?t=$GITHUB_RUN_ID\" width=\"100%\" />"
+              echo ""
+            done
+          } >> "$GITHUB_STEP_SUMMARY"

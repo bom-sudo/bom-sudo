@@ -243,6 +243,50 @@ gantt
   <img alt="contribution snake" src="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/github-snake.svg" />
 </picture>
 
+<details>
+<summary><b>🟡 Pac-Man mode</b> — click to unleash</summary>
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/pacman-contribution-graph-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/pacman-contribution-graph.svg" />
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/pacman-contribution-graph.svg" />
+</picture>
+
+</details>
+
+<details>
+<summary><b>🧱 Breakout mode</b> — smash those commits</summary>
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/breakout-contribution-graph-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/breakout-contribution-graph.svg" />
+  <img alt="breakout contribution graph" src="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/breakout-contribution-graph.svg" />
+</picture>
+
+</details>
+
+<details>
+<summary><b>🌈 Neon snake mode</b></summary>
+<br/>
+
+<img alt="neon contribution snake" src="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/github-snake-neon.svg" />
+
+</details>
+
+</div>
+
+### 🏙️ 3D Contribution City
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/3d/profile-night-rainbow.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/3d/profile-season-animate.svg" />
+  <img alt="3D contribution graph" src="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/3d/profile-season-animate.svg" />
+</picture>
+
 </div>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
