@@ -34,6 +34,10 @@ jobs:
             dist/github-snake-neon.svg?color_background=#0d1117&color_snake=#ff006e&color_dots=#161b22,#3a0ca3,#7209b7,#f72585,#ff9e00
             dist/github-snake.gif?palette=github-dark&color_snake=#c77dff&color_dots=#161b22,#003d4d,#00708a,#00a8cc,#00d9ff
 
+      # snk รันใน Docker เป็น root → dist/ เป็นของ root ทำให้ step ถัดไปเขียนไฟล์ไม่ได้ (EACCES)
+      - name: "🔑 Fix dist/ ownership"
+        run: sudo chown -R "$(id -u):$(id -g)" dist
+
       # 🟡 Pac-Man + 🧱 Breakout เล่นบน contribution graph (light + dark → dist/)
       # repo นี้ไม่มี release tag เลยต้องใช้ @main
       - name: "🟡 Generate Pac-Man & 🧱 Breakout"
