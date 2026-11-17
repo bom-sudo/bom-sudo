@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Typing Header -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=32&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&random=false&width=600&lines=Hi+there%2C+I'm+Natiphong+%F0%9F%91%8B;Infrastructure+Engineer+%F0%9F%9A%80;Automation+Enthusiast+%F0%9F%A4%96;Tech+Explorer+%F0%9F%8C%9F" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=32&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&random=false&width=600&lines=Hi+there%2C+I'm+Natiphong+%F0%9F%91%8B;Infrastructure+Engineer+%F0%9F%9A%80;Automation+Enthusiast+%F0%9F%A4%96;Road+to+Platform+Engineer+2027+%F0%9F%8E%AF" alt="Typing SVG" />
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
@@ -32,7 +32,19 @@
 ## 👨‍💻 About Me
 
 ```typescript
-const natiphong = {
+interface Engineer {
+    role: string;
+    location: string;
+    company: string;
+    background: string;
+    currentFocus: string[];
+    learning: string[];
+    hobbies: string[];
+    nextMilestone: { year: 2027; buddhistYear: 2570; target: string };
+    sayHi: () => void;
+}
+
+const natiphong: Engineer = {
     role: "Infrastructure Engineer 🏗️",
     location: "Bangkok, Thailand 🇹🇭",
     company: "Provincial Waterworks Authority",
@@ -40,8 +52,9 @@ const natiphong = {
     currentFocus: ["Data Center Optimization", "SAP Basis", "Kubernetes"],
     learning: ["React.js", "Next.js", "Advanced K8s Patterns"],
     hobbies: ["Automation 🤖", "System Architecture 📐", "Tech Exploration 🔍"],
-    
-    sayHi: () => console.log("Let's build something amazing together! 🚀")
+    nextMilestone: { year: 2027, buddhistYear: 2570, target: "Platform Engineer 🛠️" },
+
+    sayHi: () => console.log("Let's build something amazing together! 🚀"),
 };
 
 natiphong.sayHi();
@@ -57,9 +70,13 @@ Here are the tools and technologies I use to build, deploy, and maintain systems
 <p>
   <a href="https://kubernetes.io/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" alt="kubernetes" width="40" height="40"/> </a>
   <a href="https://www.docker.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a>
+  <a href="https://helm.sh/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/helm/helm-original.svg" alt="helm" width="40" height="40"/> </a>
+  <a href="https://argo-cd.readthedocs.io/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/argocd/argocd-original.svg" alt="argocd" width="40" height="40"/> </a>
   <a href="https://aws.amazon.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a>
+  <a href="https://azure.microsoft.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" alt="azure" width="40" height="40"/> </a>
   <a href="https://www.terraform.io/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg" alt="terraform" width="40" height="40"/> </a>
   <a href="https://www.ansible.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg" alt="ansible" width="40" height="40"/> </a>
+  <a href="https://github.com/features/actions" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/githubactions/githubactions-original.svg" alt="github actions" width="40" height="40"/> </a>
   <a href="https://www.linux.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a>
   <a href="https://www.nginx.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40"/> </a>
   <a href="https://grafana.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg" alt="grafana" width="40" height="40"/> </a>
@@ -81,6 +98,7 @@ Here are the tools and technologies I use to build, deploy, and maintain systems
   <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
   <a href="https://golang.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="go" width="40" height="40"/> </a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
+  <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a>
   <a href="https://www.gnu.org/software/bash/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a>
   <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
   <a href="https://nextjs.org/" target="_blank"> <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40"/> </a>
@@ -104,17 +122,21 @@ Here are the tools and technologies I use to build, deploy, and maintain systems
 graph LR
     A[Game Specialist<br/>Persec] --> B[Software Tester<br/>AIS]
     B --> C[Infrastructure Engineer<br/>PWA]
-    
+    C -.->|2027 / 2570| D[Platform Engineer<br/>🎯 Next Level]
+
     style A fill:#ff6b6b,stroke:#c92a2a,stroke-width:2px,color:#fff
     style B fill:#4ecdc4,stroke:#0a9396,stroke-width:2px,color:#fff
     style C fill:#45b7d1,stroke:#0077b6,stroke-width:2px,color:#fff
+    style D fill:#9b5de5,stroke:#5a189a,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
 ```
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-## 🎯 Current Focus
+## 🎯 Goals & Roadmap
 
-<div align="center">
+<details>
+<summary><b>📌 2026 (พ.ศ. 2569)</b> — click to expand</summary>
+<br/>
 
 ```yaml
 2026_goals:
@@ -122,17 +144,104 @@ graph LR
     - "Advanced Kubernetes patterns & service mesh"
     - "Multi-cloud architecture (AWS, GCP, Azure)"
     - "Infrastructure security hardening"
-  
+
   development:
     - "Master React.js & Next.js ecosystem"
     - "Build full-stack applications"
     - "Contribute to open-source projects"
-  
+
   automation:
     - "CI/CD pipeline optimization"
     - "GitOps workflows with ArgoCD"
     - "Python automation scripts"
 ```
+
+</details>
+
+### 🚀 2027 (พ.ศ. 2570)
+
+```yaml
+2027_goals:
+  platform_engineering:
+    - "Build Internal Developer Platform (Backstage)"
+    - "Self-service infra via Crossplane / Terraform modules"
+    - "Golden path templates for new services"
+
+  reliability:
+    - "SLO/SLI & error budgets for critical services"
+    - "Full observability stack: OpenTelemetry + Grafana LGTM"
+    - "Chaos engineering & DR drills (SAP + K8s workloads)"
+
+  security:
+    - "Policy-as-Code with Kyverno / OPA"
+    - "Supply chain security: SBOM, image signing (cosign)"
+    - "Zero-trust networking & secret management (Vault)"
+
+  development:
+    - "Ship production tools in Go"
+    - "Explore Rust for CLI & system tooling"
+    - "Launch side project with Next.js + K8s"
+
+  ai_ops:
+    - "LLM-powered automation for ops runbooks"
+    - "AI-assisted incident triage"
+
+  certifications:
+    - "CKA → CKS"
+    - "AWS Solutions Architect – Associate"
+    - "HashiCorp Terraform Associate"
+```
+
+```mermaid
+gantt
+    title 🗓️ 2027 Roadmap (พ.ศ. 2570)
+    dateFormat YYYY-MM
+    axisFormat %b
+
+    section 🎓 Certs
+    CKA                          :a1, 2027-01, 2M
+    CKS                          :a2, after a1, 3M
+    AWS SAA                      :a3, 2027-07, 2M
+    Terraform Associate          :a4, 2027-10, 2M
+
+    section 🏗️ Platform
+    Backstage IDP                :b1, 2027-02, 4M
+    Golden Path Templates        :b2, after b1, 3M
+
+    section 🔐 Security
+    Policy-as-Code               :c1, 2027-04, 2M
+    Supply Chain Security        :c2, after c1, 3M
+
+    section 📊 Reliability
+    OpenTelemetry + LGTM         :d1, 2027-03, 3M
+    SLO & Chaos Engineering      :d2, after d1, 4M
+```
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=natiphong-ju&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=natiphong-ju&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" />
+
+<img src="https://streak-stats.demolab.com?user=natiphong-ju&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=natiphong-ju&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" />
+
+</div>
+
+### 🐍 Contribution Snake
+
+<div align="center">
+
+<!-- Generated by .github/workflows/snake.yml → pushed to the `output` branch -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/github-snake.svg" />
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/natiphong-ju/natiphong-ju/output/github-snake.svg" />
+</picture>
 
 </div>
 
@@ -158,7 +267,7 @@ graph LR
 
 ### 💬 Ask me about
 
-**Infrastructure** • **SAP Basis** • **Kubernetes** • **Testing Automation** • **DevOps Best Practices**
+**Infrastructure** • **SAP Basis** • **Kubernetes** • **Platform Engineering** • **Testing Automation** • **DevOps Best Practices**
 
 ### 📧 Reach Out
 
@@ -176,7 +285,7 @@ graph LR
 ---
 
 <p>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&random=false&width=600&lines=Thanks+for+visiting!+%F0%9F%91%8B;Let's+build+something+amazing+together!+%F0%9F%9A%80;Open+to+collaboration+%26+learning!+%F0%9F%8C%9F" alt="Footer" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&random=false&width=600&lines=Thanks+for+visiting!+%F0%9F%91%8B;Let's+build+something+amazing+together!+%F0%9F%9A%80;See+you+in+2027+%2F+%E0%B8%9E.%E0%B8%A8.+2570+%F0%9F%8C%9F" alt="Footer" />
 </p>
 
 </div>
