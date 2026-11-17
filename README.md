@@ -158,38 +158,79 @@ graph LR
 
 </details>
 
-### 🚀 2027 (พ.ศ. 2570)
+### 🚀 2027 (พ.ศ. 2570) — AI Datacenter × Cyber Security
+
+> 🧭 **Theme:** จาก Infrastructure Engineer → Platform Engineer ที่ดูแล **โครงสร้างพื้นฐาน AI** ได้ และ **ปลอดภัยตั้งแต่ออกแบบ**
+
+#### 📡 Trend Radar — สิ่งที่กำลังมาและน่าจับตา
+
+```mermaid
+mindmap
+  root((2027 · พ.ศ. 2570))
+    🏭 AI Datacenter
+      Liquid Cooling & 100kW+ racks
+      GPU scheduling on K8s
+      Inference overtakes Training
+      Power & Energy efficiency
+      Digital Twin for DC ops
+    🔐 Cyber Security
+      Agentic AI Security
+      Post-Quantum Crypto
+      Non-Human Identity
+      Supply Chain & SBOM
+      Deepfake Social Engineering
+    🛠️ Platform Eng
+      AI-native IDP
+      MCP Gateway
+      Golden Paths
+      Self-service GPU
+    🤖 AI Ops
+      AI Incident Triage
+      LLM Runbooks
+      AIOps Observability
+```
+
+| 🔥 Trend | ทำไมต้องสน | สิ่งที่จะลงมือทำ |
+|---|---|---|
+| 🏭 **AI Factory / Liquid Cooling** | rack สำหรับ AI กินไฟ 40–100+ kW, ระบบลมเดิมรับไม่ไหว | ศึกษา DLC / rear-door HX, PUE & capacity planning |
+| 🎮 **GPU on Kubernetes** | AI workloads ย้ายมารันบน K8s มากขึ้น | NVIDIA GPU Operator, Kueue, MIG / time-slicing |
+| ⚡ **Inference at scale** | คาดว่า inference จะแซง training ในไม่ช้า | Lab vLLM / KServe + autoscaling บน GPU |
+| 🕵️ **Agentic AI Security** | AI agent ทำงานเองได้ → สิทธิ์เกิน, prompt injection | Guardrails, least-privilege สำหรับ agent, audit log |
+| 🔑 **Non-Human Identity** | service account / agent / token เยอะกว่าคน | Workload identity (SPIFFE/SPIRE), Vault dynamic secrets |
+| 🧬 **Post-Quantum Crypto** | "Harvest now, decrypt later" | Crypto inventory, ทดลอง ML-KEM / hybrid TLS |
+| 📦 **Supply Chain Security** | ถูกโจมตีผ่าน dependency / image | SBOM, cosign, SLSA, admission policy |
+| 🔌 **MCP Gateway** | IDP ถูกใช้งานผ่าน AI agent แทน portal | MCP server สำหรับ infra tools + RBAC |
+
+#### 🎯 2027 Goals
 
 ```yaml
 2027_goals:
+  ai_datacenter:
+    - "เข้าใจ AI Factory: power, liquid cooling, 40-100kW rack design"
+    - "GPU cluster on K8s: NVIDIA GPU Operator, MIG, Kueue scheduling"
+    - "Self-hosted LLM inference: vLLM / KServe + GPU autoscaling"
+    - "DCIM + capacity planning dashboard (power / cooling / GPU usage)"
+
+  cyber_security:
+    - "Agentic AI security: guardrails, prompt-injection testing, agent RBAC"
+    - "Non-human identity: SPIFFE/SPIRE + Vault dynamic secrets"
+    - "Post-quantum readiness: crypto inventory + hybrid TLS (ML-KEM) lab"
+    - "Supply chain: SBOM, cosign, SLSA L3, Kyverno admission policies"
+    - "Runtime security: Falco / eBPF threat detection"
+
   platform_engineering:
-    - "Build Internal Developer Platform (Backstage)"
-    - "Self-service infra via Crossplane / Terraform modules"
-    - "Golden path templates for new services"
-
-  reliability:
-    - "SLO/SLI & error budgets for critical services"
-    - "Full observability stack: OpenTelemetry + Grafana LGTM"
-    - "Chaos engineering & DR drills (SAP + K8s workloads)"
-
-  security:
-    - "Policy-as-Code with Kyverno / OPA"
-    - "Supply chain security: SBOM, image signing (cosign)"
-    - "Zero-trust networking & secret management (Vault)"
-
-  development:
-    - "Ship production tools in Go"
-    - "Explore Rust for CLI & system tooling"
-    - "Launch side project with Next.js + K8s"
+    - "AI-native Internal Developer Platform (Backstage + MCP Gateway)"
+    - "Golden paths: secure-by-default templates (Policy-as-Code)"
+    - "Self-service GPU environment for data/AI teams"
 
   ai_ops:
-    - "LLM-powered automation for ops runbooks"
-    - "AI-assisted incident triage"
+    - "AI-assisted incident triage + LLM-powered runbooks"
+    - "Observability for AI: OpenTelemetry + Grafana LGTM + GPU metrics (DCGM)"
 
   certifications:
     - "CKA → CKS"
-    - "AWS Solutions Architect – Associate"
-    - "HashiCorp Terraform Associate"
+    - "NVIDIA-Certified Associate: AI Infrastructure & Operations"
+    - "CompTIA Security+ → CCSP"
 ```
 
 ```mermaid
@@ -201,20 +242,24 @@ gantt
     section 🎓 Certs
     CKA                          :a1, 2027-01, 2M
     CKS                          :a2, after a1, 3M
-    AWS SAA                      :a3, 2027-07, 2M
-    Terraform Associate          :a4, 2027-10, 2M
+    NVIDIA AI Infra Associate    :a3, 2027-07, 2M
+    Security+                    :a4, 2027-09, 2M
 
-    section 🏗️ Platform
-    Backstage IDP                :b1, 2027-02, 4M
-    Golden Path Templates        :b2, after b1, 3M
+    section 🏭 AI Datacenter
+    AI Factory & Cooling study   :b1, 2027-01, 3M
+    GPU Operator + Kueue lab     :b2, 2027-03, 3M
+    vLLM / KServe inference      :b3, after b2, 3M
 
-    section 🔐 Security
-    Policy-as-Code               :c1, 2027-04, 2M
-    Supply Chain Security        :c2, after c1, 3M
+    section 🔐 Cyber Security
+    Supply Chain + Kyverno       :c1, 2027-02, 3M
+    SPIFFE + Vault identity      :c2, after c1, 2M
+    Agentic AI guardrails        :c3, 2027-07, 3M
+    Post-Quantum TLS lab         :c4, 2027-10, 2M
 
-    section 📊 Reliability
-    OpenTelemetry + LGTM         :d1, 2027-03, 3M
-    SLO & Chaos Engineering      :d2, after d1, 4M
+    section 🛠️ Platform & AIOps
+    Backstage + MCP Gateway      :d1, 2027-04, 4M
+    AI Incident Triage           :d2, after d1, 3M
+    GPU Observability (DCGM)     :d3, 2027-06, 2M
 ```
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
